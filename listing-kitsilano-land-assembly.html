@@ -26,6 +26,7 @@ a:hover{color:#8A6A3E}
 <nav style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-weight: 500; font-size: 15px">
 <a href="index.html">Home</a>
 <a href="listings.html">All current listings</a>
+<a href="#" data-lang-toggle>普通话</a>
 <a href="tel:7783899947">778-389-9947</a>
 </nav>
 </div>
@@ -60,7 +61,6 @@ a:hover{color:#8A6A3E}
 <div style="flex: 1 1 200px; min-width: 0; padding: 16px 0; border-top: 1px solid #D9D0C2"><div style="font-family: 'Hanken Grotesk', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.2em; color: #8A6A3E; text-transform: uppercase">Price</div><div style="font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; font-size: 24px; line-height: 1.25">Upon inquiry</div></div>
 </div>
 <div style="font-size: 15px; color: #4A443B">Listed by Vivian Jiang PREC* and Angel Shih PREC*, Royal Pacific Realty Corp.. Details may change; please confirm with the listing brokerage.</div>
-<div><a href="mailto:vivianjiang@royalpacific.com?subject=Kitsilano%20Land%20Assembly" style="border: 1.5px solid #1C1A17; text-decoration: none; font-weight: 600; padding: 14px 26px; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Ask about this listing</a></div>
 </div>
 </section>
 
@@ -75,6 +75,86 @@ a:hover{color:#8A6A3E}
 </section>
 </div>
 
-
+<script>(function(){
+/*ZH-START*/
+try {
+(function () {
+var ZH = {"Home": "首页", "All current listings": "全部在售房源", "EXCLUSIVE LISTING": "独家代理房源", "Kitsilano Land Assembly": "Kitsilano 土地整合项目", "Close to the future Arbutus SkyTrain Station, Vancouver": "临近未来的 Arbutus 天车站，温哥华", "Price upon inquiry": "价格面议", "Ask me about this property.": "欢迎向我咨询这处房产。", "Vivian Jiang Personal Real Estate Corporation": "Vivian Jiang 个人房地产公司", "Call 778-389-9947": "致电 778-389-9947", "← All current listings": "← 全部在售房源", "THE DETAILS": "详细信息", "Building": "建筑", "Property type": "房产类型", "EXCLUSIVE LISTING · FOR SALE": "独家代理房源 · 出售", "An exclusive land assembly close to the future Arbutus SkyTrain Station. The 18-storey building site is strategically located to become a landmark in the city’s evolving skyline.": "临近未来 Arbutus 天车站的独家土地整合项目。这块可建 18 层大楼的地块位置优越，有望成为城市天际线上的新地标。", "Site details and the information package are available on request. Contact Vivian to discuss the opportunity.": "如需地块详情和资料包，请联系 Vivian 洽谈。", "Land assembly": "土地整合", "Site": "地块", "Building site for an 18-storey tower": "可建 18 层高楼的建筑用地", "Location": "位置", "Kitsilano, near the future Arbutus SkyTrain Station": "Kitsilano，临近未来的 Arbutus 天车站", "Status": "状态", "Exclusive listing": "独家代理房源", "Price": "价格", "Upon inquiry": "面议", "Listed by Vivian Jiang PREC* and Angel Shih PREC*, Royal Pacific Realty Corp.. Details may change; please confirm with the listing brokerage.": "房源由 Vivian Jiang PREC* 与 Angel Shih PREC*（Royal Pacific Realty Corp.）挂牌。详情可能变动，请向挂牌经纪公司确认。", "Listings": "房源", "Contact": "联系", "Personal Real Estate Corporation": "个人房地产公司", "18-storey building site": "可建 18 层大楼的地块"};
+var CITY = {"Vancouver": "温哥华", "Burnaby": "本拿比", "Richmond": "列治文", "Coquitlam": "高贵林", "North Vancouver": "北温哥华", "West Vancouver": "西温哥华", "New Westminster": "新西敏", "Port Moody": "穆迪港", "Surrey": "素里", "Chilliwack": "奇利瓦克"};
+var SEG = {"court-ordered sale, site for four townhomes": "法院裁定出售，可建四栋联排别墅的地块", "court-ordered sale of a site approved for four townhomes": "法院裁定出售，已获批可建四栋联排别墅的地块", "commercial": "商业物业", "12-unit building": "12 单元楼", "south-facing views": "朝南景观", "Craftsman-style home": "工匠风格住宅", "Retail building": "零售楼宇", "Retail": "商铺", "Multi-family": "多户住宅", "Exclusive listing": "独家代理房源", "Mixed-use retail & office": "零售及办公混合用途", "Duplex": "双拼别墅", "Condo": "公寓", "Townhouse": "联排别墅", "townhouse": "联排别墅", "Loft": "阁楼公寓", "Penthouse condo": "顶层公寓", "double garage": "双车库", "fenced yard": "围栏庭院"};
+var MON = {January:1,February:2,March:3,April:4,May:5,June:6,July:7,August:8,September:9,October:10,November:11,December:12};
+function place(p) { return p.split(', ').map(function (t) { return CITY[t] || t; }).join(', '); }
+function seg(p) {
+  if (SEG[p]) return SEG[p];
+  var m;
+  if ((m = p.match(/^(\d+) bed(?:room)?s?$/))) return m[1] + ' 卧室';
+  if ((m = p.match(/^(\d+) bath$/))) return m[1] + ' 卫';
+  if ((m = p.match(/^([\d,]+) sq\. ft\.$/))) return m[1] + ' 平方英尺';
+  if ((m = p.match(/^built (\d{4})$/))) return m[1] + ' 年建成';
+  if ((m = p.match(/^zoned (\S+)$/))) return '规划用途 ' + m[1];
+  if ((m = p.match(/^(\d+)-bed townhome$/))) return m[1] + ' 卧室联排别墅';
+  if ((m = p.match(/^about (\$[\d,]+) gross income$/))) return '总收入约 ' + m[1];
+  return p;
+}
+function tr(s) {
+  if (ZH.hasOwnProperty(s)) return ZH[s];
+  var m;
+  if ((m = s.match(/^([A-Za-z]+) (\d{4}) snapshot$/)) && MON[m[1]]) return m[2] + ' 年 ' + MON[m[1]] + ' 月概览';
+  if ((m = s.match(/^MLS® HPI benchmark price · (.+) vs\. last year$/))) return 'MLS® HPI 基准价格 · 较去年同期 ' + m[1];
+  if ((m = s.match(/^([\d,]+) sales \((.+) vs\. last year\)$/))) return m[1] + ' 宗成交（较去年同期 ' + m[2] + '）';
+  if ((m = s.match(/^([\d,]+) active listings$/))) return m[1] + ' 个在售房源';
+  if ((m = s.match(/^(\$[\d,.]+) a year(?: \((\d{4})\))?$/))) return '每年 ' + m[1] + (m[2] ? '（' + m[2] + '）' : '');
+  if ((m = s.match(/^(\$[\d,.]+) per month$/))) return '每月 ' + m[1];
+  if ((m = s.match(/^Reduced from (\$[\d,]+)$/))) return '由 ' + m[1] + ' 降价';
+  if (s.indexOf(' · ') > -1) {
+    return s.split(' · ').map(function (p) { var r = seg(p); return r !== p ? r : place(p); }).join(' · ');
+  }
+  var r2 = seg(s);
+  return r2 !== s ? r2 : place(s);
+}
+var KEY = 'vj-lang';
+function getLang() { try { return localStorage.getItem(KEY) === 'zh' ? 'zh' : 'en'; } catch (e) { return 'en'; } }
+function setLang(l) { try { localStorage.setItem(KEY, l); } catch (e) {} }
+var origTitle = document.title;
+function apply(lang) {
+  var w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+  var n, nodes = [];
+  while ((n = w.nextNode())) nodes.push(n);
+  nodes.forEach(function (t) {
+    var p = t.parentNode;
+    if (!p || /^(SCRIPT|STYLE|NOSCRIPT)$/.test(p.nodeName)) return;
+    if (p.closest && p.closest('.countup')) return;
+    if (t.__en === undefined) t.__en = t.nodeValue;
+    var src = t.__en, core = src.replace(/\s+/g, ' ').trim();
+    if (!core) return;
+    if (lang === 'zh') {
+      var z = tr(core);
+      if (z !== core) t.nodeValue = src.match(/^\s*/)[0] + z + src.match(/\s*$/)[0];
+    } else {
+      t.nodeValue = src;
+    }
+  });
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  var tg = document.querySelectorAll('[data-lang-toggle]');
+  for (var i = 0; i < tg.length; i++) tg[i].textContent = lang === 'zh' ? 'English' : '普通话';
+}
+var cur = 'en';
+function sync() { var l = getLang(); if (l !== cur) { cur = l; apply(l); } }
+var tgs = document.querySelectorAll('[data-lang-toggle]');
+for (var i = 0; i < tgs.length; i++) {
+  tgs[i].addEventListener('click', function (e) {
+    e.preventDefault();
+    setLang(getLang() === 'zh' ? 'en' : 'zh');
+    sync();
+  });
+}
+window.addEventListener('storage', sync);
+window.__vjTr = function () { if (cur === 'zh') apply('zh'); };
+setInterval(sync, 700);
+sync();
+})();
+} catch (e) {}
+/*ZH-END*/
+})();</script>
 </body>
 </html>
