@@ -510,7 +510,7 @@ function build() {
     e.preventDefault();
     if (hp.value) return;
     var d = {}; var els = form.elements; for (var i = 0; i < els.length; i++) { if (els[i].name && els[i].name !== '_honey') d[els[i].name] = els[i].value; }
-    d.name = d.first_name + ' ' + d.last_name; d._subject = 'Website enquiry from ' + d.name; d._template = 'table'; d._captcha = 'false'; d.page = location.href;
+    d.name = d.first_name + ' ' + d.last_name; d._subject = 'Website enquiry from ' + d.name; d._template = 'table'; d._captcha = 'false'; d._cc = 'wenwenjiang1129@gmail.com'; d.page = location.href;
     btn.disabled = true; var old = btn.textContent; btn.textContent = 'Sending…'; try { window.__vjTr && window.__vjTr(); } catch (e2) {}
     var done = false;
     fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(d) })
