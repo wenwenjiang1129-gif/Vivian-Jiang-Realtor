@@ -350,13 +350,16 @@ cta = (f'<section style="background:#1C1A17;color:#F5F1EA"><div style="max-width
 
 if a.mode == 'dc':
     H_HOME, H_LIST, H_MKT = 'Main.dc.html', 'AllListings.dc.html', 'Main.dc.html#market'
+    H_NB = 'Neighbourhoods.dc.html'
 else:
     H_HOME, H_LIST, H_MKT = SITE + '/', SITE + '/listings.html', SITE + '/index.html#market'
+    H_NB = SITE + '/neighbourhoods.html'
 header = (f'<header style="background:#1C1A17;color:#F5F1EA"><div style="max-width:1200px;margin:0 auto;box-sizing:border-box;padding:22px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 32px">'
           f'<a href="{H_HOME}" style="font-family:\'Cormorant Garamond\',Georgia,serif;font-weight:500;font-size:22px;letter-spacing:0.02em;text-decoration:none;color:inherit">Vivian Jiang <span style="font-weight:400;font-size:12px;letter-spacing:0.2em;color:#CFC6B8">PREC</span></a>'
           f'<nav style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px;font-weight:500;font-size:15px">'
           f'<a href="{H_HOME}" style="color:inherit">{T("Home", "首页")}</a>'
           f'<a href="{H_LIST}" style="color:inherit">{T("All current listings", "全部在售房源")}</a>'
+          f'<a href="{H_NB}" style="color:inherit">{T("Neighbourhoods", "社区")}</a>'
           f'<a href="{H_MKT}" style="color:inherit">{T("Market", "市场")}</a>'
           f'<a href="#" data-lang-toggle style="color:inherit">普通话</a>'
           f'<a href="tel:7783899947" style="color:inherit">778-389-9947</a></nav></div></header>')
