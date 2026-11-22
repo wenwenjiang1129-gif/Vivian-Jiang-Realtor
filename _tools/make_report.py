@@ -251,7 +251,6 @@ notes_list = ''.join(f'<div style="{LI}">{T(e, z)}</div>' for e, z in _notes)
 rent_note = T('These are asking rents from listings on liv.rent and other sites. They differ from what current tenants pay and from CMHC figures. Luxury listings over $5,000 a month, rooms and shared accommodation are excluded.',
               '以上为 liv.rent 及其他网站上的挂牌租金，与现有租客实际支付的租金以及 CMHC 的数据不同。每月租金超过 5,000 加元的豪华房源、单间出租和合租均不在统计之内。')
 rentals = (head(T('RENTALS', '租金'), T('Asking rents, from liv.rent', '租金概况（来源：liv.rent）')) +
-           f'<div style="display:flex;flex-wrap:wrap;gap:24px">{metro}{van1}{van2}{psf}</div>' +
            (f'<div style="display:flex;flex-direction:column;border-bottom:1px solid #D9D0C2">{notes_list}</div>' if notes_list else '') +
            (f'<div style="display:flex;flex-direction:column;gap:12px"><div style="font-weight:600">{T("Average unfurnished asking rent by city, " + month_en, "各城市不带家具平均挂牌租金，" + month_zh)}</div>' +
             table([T('City', '城市'), T('1-bed', '一居室'), T('2-bed', '两居室'), T('3-bed', '三居室'), T('1-bed, year over year', '一居室同比')],
