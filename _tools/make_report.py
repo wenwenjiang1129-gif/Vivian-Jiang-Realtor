@@ -257,10 +257,6 @@ rentals = (head(T('RENTALS', '租金'), T('Asking rents, from liv.rent', '租金
             table([T('City', '城市'), T('1-bed', '一居室'), T('2-bed', '两居室'), T('3-bed', '三居室'), T('1-bed, year over year', '一居室同比')],
                   [[T(e, z), a, b, c, y] for e, z, a, b, c, y in lv['cities']]) +
             f'<div style="font-size:13px;color:#6A6258">{T("Year-over-year change is for unfurnished one-bedrooms, compared with October last year.", "同比变化为不带家具一居室，与去年 10 月相比。")}</div></div>') +
-           (f'<div style="display:flex;flex-direction:column;gap:12px"><div style="font-weight:600">{T("Vancouver neighbourhoods: average unfurnished asking rent, " + month_en, "温哥华各社区不带家具平均挂牌租金，" + month_zh)}</div>' +
-            table([T('Neighbourhood', '社区'), T('1-bed', '一居室'), T('2-bed', '两居室'), T('3-bed', '三居室')],
-                  [[T(e, z), dash(a), dash(b), dash(c)] for e, z, a, b, c in lv['vhoods']]) +
-            f'<div style="font-size:13px;color:#6A6258">{T("Eight of the 16 City of Vancouver neighbourhoods are shown here, as published by liv.rent. A dash means liv.rent shows no data. Sunset–Victoria Fraserview was the lowest of the 16 for one-bedrooms at " + hd["low"][1] + ".", "此处为 liv.rent 公布的温哥华 16 个社区中的 8 个。“—”表示 liv.rent 无数据。在全部 16 个社区中，一居室租金最低的是 Sunset–Victoria Fraserview，为 " + hd["low"][1] + "。")}</div></div>') +
            f'<div style="font-size:13px;color:#6A6258">{rent_note}</div>')
 parts.append(section(rentals))
 
